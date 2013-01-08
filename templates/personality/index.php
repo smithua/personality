@@ -25,74 +25,81 @@ $app = JFactory::getApplication();
 
 		<!-- The following line loads the template JavaScript file located in the template folder. It's blank by default. -->
 		<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/template.js"></script>
-	</head>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $(".trigger").click(function(){
+                    $(".panel").toggle("slow");
+                    $(this).toggleClass("active");
+                    return false;
+                });
+            });
+        </script>
+
+
+
+        <!-- Reading browser's window width & height and applying them for sheduler -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".panel").css({'width':$(window).width(), 'height':$(window).height()});
+                $(".pwrap").css('right',function(){return (($(window).width()-920)/2)});
+                if ($(window).height()>'700'){$(".pwrap").css('top',function(){return (($(window).height()-700)/2)})};
+                window.onresize = function() {
+                    $(".panel").css({'width':$(window).width(), 'height':$(window).height()});
+                    $(".pwrap").css('right',function(){return (($(window).width()-920)/2)});
+                    if ($(window).height()>'700'){$(".pwrap").css('top',function(){return (($(window).height()-700)/2)})};
+                };
+                return false;
+            });
+        </script>
+        <!-- Reading browser's window width & height and applying them for sheduler -->
+
+    </head>
 	<body>
 		<div class="container">
-			<hr class="space" />
-			<div class="joomla-header span-16 append-1">
-				<h1><?php echo htmlspecialchars($app->getCfg('sitename')); ?></h1>
-			</div>
-			<?php if($this->countModules('atomic-search') or $this->countModules('position-0')) : ?>
-				<div class="joomla-search span-7 last">
-	  	 			<jdoc:include type="modules" name="atomic-search" style="none" />
-	  	 			<jdoc:include type="modules" name="position-0" style="none" />
-				</div>
-			<?php endif; ?>
-		</div>
-		<?php if($this->countModules('atomic-topmenu') or $this->countModules('position-2') ) : ?>
-			<jdoc:include type="modules" name="atomic-topmenu" style="container" />
-			<jdoc:include type="modules" name="position-1" style="container" />
-		<?php endif; ?>
 
-		<div class="container">
-			<div class="span-16 append-1">
-			<?php if($this->countModules('atomic-topquote') or $this->countModules('position-15') ) : ?>
-				<jdoc:include type="modules" name="atomic-topquote" style="none" />
-				<jdoc:include type="modules" name="position-15" style="none" />
 
-			<?php endif; ?>
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<hr />
-			<?php if($this->countModules('atomic-bottomleft') or $this->countModules('position-11')) : ?>
-			 	<div class="span-7 colborder">
-					<jdoc:include type="modules" name="atomic-bottomleft" style="bottommodule" />
-					<jdoc:include type="modules" name="position-11" style="bottommodule" />
+            <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
+            <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
+            <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
+            <div class="panel">
+                <div class="bg"></div>
+                <div class="pwrap">
 
-	        	</div>
-	        <?php endif; ?>
+                    <h4>Розклад занять</h4>
+                    <ul>
+                        <li>
+                            <jdoc:include type="modules" name="Rozklad_pn" />
+                        </li>
 
-	        <?php if($this->countModules('atomic-bottommiddle') or $this->countModules('position-9')
-				or $this->countModules('position-10')) : ?>
-				<div class="span-7 last">
-	        		<jdoc:include type="modules" name="atomic-bottommiddle" style="bottommodule" />
-					<jdoc:include type="modules" name="position-9" style="bottommodule" />
-					<jdoc:include type="modules" name="position-10" style="bottommodule" />
+                        <li class="blue">
+                            <jdoc:include type="modules" name="Rozklad_vt" />
+                        </li>
 
-				</div>
-			<?php endif; ?>
-			</div>
-			<?php if($this->countModules('atomic-sidebar') || $this->countModules('position-7')
-			|| $this->countModules('position-4') || $this->countModules('position-5')
-			|| $this->countModules('position-3') || $this->countModules('position-6') || $this->countModules('position-8'))
-			: ?>
-				<div class="span-7 last">
-					<jdoc:include type="modules" name="atomic-sidebar" style="sidebar" />
-					<jdoc:include type="modules" name="position-7" style="sidebar" />
-					<jdoc:include type="modules" name="position-4" style="sidebar" />
-					<jdoc:include type="modules" name="position-5" style="sidebar" />
-					<jdoc:include type="modules" name="position-6" style="sidebar" />
-					<jdoc:include type="modules" name="position-8" style="sidebar" />
-					<jdoc:include type="modules" name="position-3" style="sidebar" />
-				</div>
+                        <li class="red">
+                            <jdoc:include type="modules" name="Rozklad_sr" />
+                        </li>
 
-			<?php endif; ?>
+                        <li class="blue panel_new_row">
+                            <jdoc:include type="modules" name="Rozklad_4t" />
+                        </li>
+                        <li>
+                            <jdoc:include type="modules" name="Rozklad_pt" />
+                        </li>
+                    </ul>
 
-			<div class="joomla-footer span-16 append-1">
-				<hr />
-				&copy;<?php echo date('Y'); ?> <?php echo htmlspecialchars($app->getCfg('sitename')); ?>
-			</div>
-		</div>
-		<jdoc:include type="modules" name="debug" />
+
+                </div>
+                <a class="trigger" href="#"></a>
+            </div>
+            <a class="trigger" href="#"></a>
+            <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
+            <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
+            <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
+
+        </div>
 	</body>
 </html>
