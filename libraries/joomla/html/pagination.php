@@ -104,7 +104,7 @@ class JPagination extends JObject
         }
 
         // Set the pagination iteration loop values.
-        $displayedPages = 10;
+        $displayedPages = 5;
         $this->set('pages.start', $this->get('pages.current') - ($displayedPages / 2));
         if ($this->get('pages.start') < 1)
         {

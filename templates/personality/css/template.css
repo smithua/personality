@@ -136,109 +136,9 @@ form#form-login ul li {
   margin-left: 10px;
   margin-bottom: 10px;
 }*/
-body {
-    margin: 0;
-    background: #000;
-}
-
-.wrapper {
-    min-width: 1055px;
-}
 
 
-/*HEADER*/
-.header {
-    background: #fff;
-    overflow: hidden;
-}
-.header .wrap_logo {
-    float: left;
-    text-align: center;
-    margin: 20px 200px 10px 50px;
-}
-.header .wrap_logo h1 {
-    width: 50px;
-    height: 50px;
-    text-indent: -250px;
-    overflow: hidden;
-    background: #000;
-    margin: 0 0 5px 0;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -o-border-radius: 15px;
-    -khtml-border-radius: 15px;
-}
-.header .joomla-nav {
-    background: none;
-    border: 0;
-    margin: 30px 0 0 0;
-}
-.header .joomla-nav li {
-    min-width: 70px;
-    float: left;
-    list-style: none;
-    margin: 0 20px;
-}
-.header .joomla-nav li ul {
-    margin: 0 0 0 0;
-    padding: 0;
-    display: none;
-    width: 70px;
-}
-/*.header .joomla-nav li.parent:hover {
-    background: #99CCFF;
-}*/
-.header .joomla-nav li.parent:hover ul {
-    display: block;
-}
-.header .joomla-nav li ul li {
-    clear: both;
-    margin: 0;
-}
-
-
-
-/*CONTENT*/
-.content {
-    width: 980px;
-    margin: 30px auto 20px auto;
-    overflow: hidden;
-    padding: 0 20px 0 20px;
-    background: #fff;
-}
-
-/*CATEGORY NEWS*/
-.content h2 {
-    margin: 15px 0;
-    text-align: left;
-    line-height: 15px;
-}
-.content .category-desc h2, .content .contact h2 {
-    line-height: 20px;
-    margin: 0;
-    color: #ffa542;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 19px;
-}
-.content .blog {
-    overflow: hidden;
-    padding: 30px 0 10px 0;
-}
-.content .blog img {
-    float: left;
-    margin: 0 30px 0 0;
-}
-.content .blog p.readmore {
-    margin: 0;
-}
-.content .blog p.readmore a {
-    color: #0099d2;
-    font-size: 14px;
-}
-
-<<<<<<< Updated upstream
+/*<<<<<<< Updated upstream
 /*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*/
 /*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*/
 /*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*/
@@ -357,20 +257,128 @@ body {
 /*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*/
 /*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*/
 /*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*//*END SHEDULER END SHEDULER*/
-=======
 
-.content .items-leading {
+body {
+    margin: 0;
+    background: #000;
+}
+
+.wrapper {
+    min-width: 1055px;
+}
+
+
+/*HEADER*/
+.header {
+    background: #fff;
     overflow: hidden;
-    padding: 0 0 10px 0;
+}
+.header .wrap_logo {
+    float: left;
+    text-align: center;
+    margin: 20px 200px 10px 50px;
+}
+.header .wrap_logo h1 {
+    width: 50px;
+    height: 50px;
+    text-indent: -250px;
+    overflow: hidden;
+    background: #000;
+    margin: 0 0 5px 0;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    -khtml-border-radius: 15px;
+}
+.header .joomla-nav {
+    background: none;
+    border: 0;
+    margin: 30px 0 0 0;
+}
+.header .joomla-nav li {
+    min-width: 70px;
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+}
+.header .joomla-nav li ul {
+    margin: 0 0 0 0;
+    padding: 0;
+    display: none;
+    width: 70px;
+}
+/*.header .joomla-nav li.parent:hover {
+    background: #99CCFF;
+}*/
+.header .joomla-nav li.parent:hover ul {
+    display: block;
+}
+.header .joomla-nav li ul li {
+    clear: both;
+    margin: 0;
+}
+
+
+
+/*CONTENT*/
+.content {
+    width: 925px;
+    margin: 30px auto 20px auto;
+    overflow: hidden;
+    padding: 0 20px 0 20px;
+    background: #fff;
+    border-radius: 7px;
+}
+
+/*CATEGORY NEWS*/
+.content h2 {
+    margin: 15px 0;
+    text-align: left;
+    line-height: 15px;
+    font-weight: bold;
+}
+.content .category-desc h2, .content .contact h2 {
+    line-height: 20px;
+    margin: 0;
+    color: #ffa542;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+.content .blog, .content .contact {
+    overflow: hidden;
+    padding: 30px 0 10px 0;
+}
+.content .blog img {
+    float: left;
+    margin: 0 15px 0 0;
+}
+.content .blog p.readmore {
+    margin: 20px 0 0 0;
+}
+.content .blog p.readmore a {
+    color: #0099d2;
+    font-size: 14px;
+}
+.content .blog .items-leading {
+    overflow: hidden;
+    padding: 0 0 13px 0;
     border-bottom: 1px solid #9bcee3;
+
+    min-height: 175px;
+}
+.content .blog .items-row {
+    margin: 0 0 102px;
 }
 .content .item {
     overflow: hidden;
     border-bottom: 1px solid #9bcee3;
-    padding: 0 0 10px 0;
+    padding: 0 0 13px 0;
+    min-height: 175px;
 }
 .content .item p, .content .items-leading p {
-    color: #7a7a7a;
+    color: #4d4d4d;
     font-size: 15px;
 }
 .content .item h2 a, .content .items-leading h2 a {
@@ -380,15 +388,59 @@ body {
 
 }
 
+/*honors_board*/
 
+.content .honors_board .items-leading, .honors_board .item {
+    border-bottom: 0;
+}
+.honors_board {
+    padding: 30px 40px 10px 0 !important;
+    border-right: 1px solid #dcdced;
+}
+.honors_board img {
+    margin: 0 40px 20px 0;
+}
+.content .honors_board .items-row {
+    margin: 0 0 0;
+}
 
+/*PAGINATION*/
 
+.content .blog .pagination {
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #dcdced;
+}
 .content .blog .pagination ul {
     list-style: none;
+    overflow: hidden;
+    width: 330px;
+    margin: 0 auto;
 }
 .content .blog .pagination ul>li {
     float: left;
 }
+.content .blog .pagination ul>li a {
+    padding: 6px;
+    display: block;
+    color: #3ab0d5;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content .blog .pagination ul li.pagination-next span, .content .blog .pagination ul li.pagination-prev span {
+    background: none !important;
+    color: #3ab0d5 !important;
+}
+.content .blog .pagination ul li span.pagenav {
+    background: #0c9dcc;
+    display: block;
+    padding: 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
 /*.content .wrap_news .content_news h3 {
     text-decoration: underline;
     margin: 0 0 10px 0;
@@ -423,13 +475,17 @@ body {
     float: left;
 }*/
 .content .artuniversallightbox_container {
-    width: 330px;
+    width: 300px;
     clear: none;
     float: right;
+    text-align: center;
+    padding: 60px 0 0;
+    background: #fcfcfe;
+    /*border-left: 1px solid #dcdced;*/
 }
 .content .artuniversallightbox_container img {
-    width: 125px;
+    margin: 0 11px 30px 0;
 }
 
 
->>>>>>> Stashed changes
+/*>>>>>>> Stashed changes*/

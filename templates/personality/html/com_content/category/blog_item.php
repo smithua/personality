@@ -22,16 +22,13 @@ JHtml::_('behavior.framework');
 <?php if ($this->item->state == 0) : ?>
 <div class="system-unpublished">
 <?php endif; ?>
-<?php if ($params->get('show_title')) : ?>
-    <h2>
-        <?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
-        <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
-            <?php echo $this->escape($this->item->title); ?></a>
-        <?php else : ?>
-        <?php echo $this->escape($this->item->title); ?>
-        <?php endif; ?>
-    </h2>
-    <?php endif; ?>
+
+
+
+
+<!--Here is title-->
+
+
 
 <?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
     <ul class="actions">
@@ -124,16 +121,69 @@ JHtml::_('behavior.framework');
 <?php if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date')) or ($params->get('show_publish_date')) or ($params->get('show_parent_category')) or ($params->get('show_hits'))) :?>
  	</dl>
 <?php endif; ?>
-<?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
-    <?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
-    <div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
-        <img
-            <?php if ($images->image_intro_caption):
-            echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
-        endif; ?>
-                src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
-    </div>
+
+
+<?php
+$option   = JRequest::getCmd('option');
+$view   = JRequest::getCmd('view');
+$temp   = JRequest::getString('id');
+$temp   = explode(':', $temp);
+if ($option == 'com_content' && $view == 'category' && $temp[0])
+{
+    $category_id  = $temp[0]; //this is category ID
+}
+?>
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<?php  if ($category_id == 9) : ?>
+    <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
+        <?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
+        <div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
+            <img
+                <?php if ($images->image_intro_caption):
+                echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
+            endif; ?>
+                    src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+        </div>
     <?php endif; ?>
+
+    <?php if ($params->get('show_title')) : ?>
+        <h2>
+            <?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
+            <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
+                <?php echo $this->escape($this->item->title); ?></a>
+            <?php else : ?>
+            <?php echo $this->escape($this->item->title); ?>
+            <?php endif; ?>
+        </h2>
+    <?php endif; ?>
+<?php endif; ?>
+
+<?php  if ($category_id != 9) : ?>
+
+    <?php if ($params->get('show_title')) : ?>
+        <h2>
+            <?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
+            <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>">
+                <?php echo $this->escape($this->item->title); ?></a>
+            <?php else : ?>
+            <?php echo $this->escape($this->item->title); ?>
+            <?php endif; ?>
+        </h2>
+    <?php endif; ?>
+
+    <?php  if (isset($images->image_intro) and !empty($images->image_intro)) : ?>
+        <?php $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $images->float_intro; ?>
+        <div class="img-intro-<?php echo htmlspecialchars($imgfloat); ?>">
+            <img
+                <?php if ($images->image_intro_caption):
+                echo 'class="caption"'.' title="' .htmlspecialchars($images->image_intro_caption) .'"';
+            endif; ?>
+                    src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>"/>
+        </div>
+    <?php endif; ?>
+
+<?php endif; ?>
+
 <?php echo $this->item->introtext; ?>
 
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
