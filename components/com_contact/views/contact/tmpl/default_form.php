@@ -21,7 +21,7 @@ JHtml::_('behavior.tooltip');
 		<fieldset>
 			<legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
 			<dl>
-				<dt><?php echo $this->form->getLabel('contact_name'); ?></dt>
+				<dt><?php echo 'fvsdfv' ; ?></dt>
 				<dd><?php echo $this->form->getInput('contact_name'); ?></dd>
 				<dt><?php echo $this->form->getLabel('contact_email'); ?></dt>
 				<dd><?php echo $this->form->getInput('contact_email'); ?></dd>
