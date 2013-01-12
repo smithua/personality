@@ -15,8 +15,7 @@ defined('_JEXEC') or die;
 <?php if (($this->params->get('address_check') > 0) &&  ($this->contact->address || $this->contact->suburb  || $this->contact->state || $this->contact->country || $this->contact->postcode)) : ?>
 	<div class="contact-address">
 	<?php if ($this->params->get('address_check') > 0) : ?>
-		<h3>Наша адреса:</h3>
-        <span class="<?php echo $this->params->get('marker_class'); ?>" >
+		<span class="<?php echo $this->params->get('marker_class'); ?>" >
 			<?php echo $this->params->get('marker_address'); ?>
 		</span>
 		<address>
@@ -52,11 +51,23 @@ defined('_JEXEC') or die;
 	</address>
 	</div>
 <?php endif; ?>
-<!--here was e-mail-->
+
+<?php if($this->params->get('show_email') || $this->params->get('show_telephone')||$this->params->get('show_fax')||$this->params->get('show_mobile')|| $this->params->get('show_webpage') ) : ?>
+	<div class="contact-contactinfo">
+<?php endif; ?>
+<?php if ($this->contact->email_to && $this->params->get('show_email')) : ?>
+	<p>
+		<span class="<?php echo $this->params->get('marker_class'); ?>" >
+			<?php echo $this->params->get('marker_email'); ?>
+		</span>
+		<span class="contact-emailto">
+			<?php echo $this->contact->email_to; ?>
+		</span>
+	</p>
+<?php endif; ?>
 
 <?php if ($this->contact->telephone && $this->params->get('show_telephone')) : ?>
-	<h3>Телефон:</h3>
-    <p>
+	<p>
 		<span class="<?php echo $this->params->get('marker_class'); ?>" >
 			<?php echo $this->params->get('marker_telephone'); ?>
 		</span>
@@ -65,25 +76,6 @@ defined('_JEXEC') or die;
 		</span>
 	</p>
 <?php endif; ?>
-
-<?php if($this->params->get('show_email') || $this->params->get('show_telephone')||$this->params->get('show_fax')||$this->params->get('show_mobile')|| $this->params->get('show_webpage') ) : ?>
-	<div class="contact-contactinfo">
-<?php endif; ?>
-
-
-
-<?php if ($this->contact->email_to && $this->params->get('show_email')) : ?>
-    <h3>E-mail:</h3>
-    <p>
-		<span class="<?php echo $this->params->get('marker_class'); ?>" >
-			<?php echo $this->params->get('marker_email'); ?>
-		</span>
-		<span class="contact-emailto">
-			<?php echo $this->contact->email_to; ?>
-		</span>
-    </p>
- <?php endif; ?>
-
 <?php if ($this->contact->fax && $this->params->get('show_fax')) : ?>
 	<p>
 		<span class="<?php echo $this->params->get('marker_class'); ?>" >
