@@ -209,9 +209,9 @@ if ($option == 'com_content' && $view == 'category' && $temp[0])
                 echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
             endif;
         elseif ($params->get('show_readmore_title', 0) == 0) :
-            echo JText::sprintf('Читати повністю');
+            echo JText::sprintf('Читати далі');
         else :
-            echo JText::_('Читати повністю');
+            echo JText::_('Читати далі');
         endif; ?></a>
     </p>
     <?php endif; ?>
