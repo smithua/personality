@@ -36,6 +36,17 @@
         <position>Rozklad_4t</position>
         <position>Rozklad_pt</position>
         <position>list_of_titles</position>
+        <position>personality-map</position>
+        <position>personality-bottomleft</position>
+        <position>personality-bottommiddle</position>
+        <position>personality-search</position>
+        <position>personality-sidebar</position>
+        <position>personality-topmenu</position>
+        <position>personality-topquote</position>
+        <position>personality-lightbox</position>
+        <position>personality-contact</position>
+        <position>before-content</position>
+        <position>personality-social</position>
 	</positions>
 
 	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.

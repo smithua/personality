@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+
+/*template - personality*/
+
+
 /* A variation on Eric Meyer's CSS Reset:
    This is disabled because the Blueprint framework already has it.
    You should enable it if you aren't using Blueprint.*/
@@ -15,119 +19,353 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 body {
-	line-height: 1;
-	color: black;
-	background: white;
+  line-height: 1;
+  color: black;
+  background: white;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 table {
-	border-collapse:collapse;
-	border-spacing: 0;
+  border-collapse:collapse;
+  border-spacing: 0;
 }
 caption, th, td {
-	text-align: left;
-	font-weight: normal;
+  text-align: left;
+  font-weight: normal;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
+  content: "";
 }
 blockquote, q {
-	quotes: "" "";
+  quotes: "" "";
 }
 abbr,acronym {
-	border:0;
+  border:0;
 }
 /*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*/
 /*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*/
 /*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*//*Reset CSS*/
 
-/* Text styles */
-.blog-featured h2 {
-	font-size: 1.5em;
-	margin-bottom:0em;
-}
-p.readmore {
-	text-indent:0;
-	font-size: .9em;
-}
-.joomla-footer {
-	font-size: .9em;
-	margin-bottom: 30px;
+/*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*/
+/*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*/
+/*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*//*VITYA*/
+
+body {
+    margin: 0;
+    background: #000;
 }
 
-/* Article functions */
-ul.actions {
-	clear:both;
-	margin-top: -50px;
-	float:right;
-}
-ul.actions li {
-	list-style-type: none;
-	float:right;
-	margin-left: 10px;
+.container {
+    min-width: 1055px;
 }
 
-/* Login styles */
-p#form-login-username label,
-p#form-login-password label {
-	width: 160px;
-	display:block;
+
+/*HEADER*/
+.header {
+    background: #fff;
+    overflow: hidden;
 }
-p#form-login-remember label {
-	font-size: .9em;
-	font-weight: normal;
-	line-height: 25px;
+.header .wrap_logo {
+    float: left;
+    text-align: center;
+    margin: 20px 200px 10px 50px;
 }
-p#form-login-remember input {
-	float:left;
-	margin-right: 5px;
+.header .wrap_logo h1 {
+    width: 50px;
+    height: 50px;
+    text-indent: -250px;
+    overflow: hidden;
+    background: #000;
+    margin: 0 0 5px 0;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    -khtml-border-radius: 15px;
 }
-form#form-login ul {
-	margin: 0;
-	padding: 0;
+.header .joomla-nav {
+    background: none;
+    border: 0;
+    margin: 30px 0 0 0;
 }
-form#form-login ul li {
-	list-style-type: none;
-	margin-left: 20px;
-	font-size: .9em;
+.header .joomla-nav li {
+    min-width: 70px;
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+}
+.header .joomla-nav li ul {
+    margin: 0 0 0 0;
+    padding: 0;
+    display: none;
+    width: 70px;
+}
+/*.header .joomla-nav li.parent:hover {
+    background: #99CCFF;
+}*/
+.header .joomla-nav li.parent:hover ul {
+    display: block;
+}
+.header .joomla-nav li ul li {
+    clear: both;
+    margin: 0;
 }
 
-/* Image float styles */
 
 
-.img-intro-left {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
+/*CONTENT*/
+.content {
+    width: 925px;
+    margin: 30px auto 20px auto;
+    overflow: hidden;
+    padding: 0 20px 0 20px;
+    background: #fff;
+    border-radius: 7px;
+}.content {
+     overflow: hidden;
+ }
+
+/*CATEGORY NEWS*/
+.content h2 {
+    margin: 15px 0;
+    text-align: left;
+    line-height: 15px;
+    font-weight: bold;
+}
+.content .category-desc h2, .content .contact h2     {
+    line-height: 20px;
+    margin: 0;
+    color: #ffa542;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: Arial,sans-serif;
+}
+.content .blog img {
+    float: left;
+    margin: 0 15px 0 0;
+}
+.content .blog p.readmore {
+    margin: 20px 0 0 0;
+}
+.content .blog p.readmore a {
+    color: #0099d2;
+    font-size: 14px;
+}
+.content .blog .items-leading {
+    overflow: hidden;
+    padding: 0 0 13px 0;
+    border-bottom: 1px solid #9bcee3;
+
+    min-height: 175px;
+}
+.content .blog .items-row {
+    margin: 0 0 102px;
+}
+.content .item {
+    overflow: hidden;
+    border-bottom: 1px solid #9bcee3;
+    padding: 0 0 13px 0;
+    min-height: 175px;
+}
+.content .item p, .content .items-leading p {
+    color: #4d4d4d;
+    font-size: 15px;
+}
+.content .item h2 a, .content .items-leading h2 a {
+    color: #0c9dcc;
+    text-decoration: none;
+    font-size: 18px;
+
 }
 
-.img-fulltext-right {
-	float: right;
-	margin-left: 20px;
-	margin-bottom: 20px;
+/*honors_board*/
+
+.content .honors_board .items-leading, .honors_board .item {
+    border-bottom: 0;
+}
+.honors_board {
+    padding: 30px 40px 10px 0 !important;
+    border-right: 1px solid #dcdced;
+}
+.honors_board img {
+    margin: 0 40px 20px 0;
+}
+.content .honors_board .items-row {
+    margin: 0 0 0;
 }
 
-.img-intro-right {
-	float: right;
-	margin-left: 10px;
-	margin-bottom: 10px;
+/*PAGINATION*/
+
+.content .blog .pagination {
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #dcdced;
 }
+.content .blog .pagination ul {
+    list-style: none;
+    overflow: hidden;
+    width: 365px;
+    margin: 0 auto;
+}
+.content .blog .pagination ul>li {
+    float: left;
+}
+.content .blog .pagination ul>li a {
+    padding: 6px;
+    display: block;
+    color: #3ab0d5;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content .blog .pagination ul li.pagination-next span, .content .blog .pagination ul li.pagination-prev span {
+    background: none !important;
+    color: #3ab0d5 !important;
+}
+.content .blog .pagination ul li span.pagenav {
+    background: #0c9dcc;
+    display: block;
+    padding: 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+/*.content .wrap_news .content_news h3 {
+    text-decoration: underline;
+    margin: 0 0 10px 0;
+}*/
+
+/*CONTACTS*/
+
+
+.content .contact {
+   float: left;
+    margin: 0 40px 0 0;
+}
+.content .contact h2 {
+}
+.content .contact span, .content .contact span a {
+    color: #4c4c4c;
+    font-size: 15px;
+}
+.content .contact h2 span {
+    font-size: 18px;
+    color: #ffa542;
+    line-height: 20px;
+    font-family: Arial,sans-serif;
+}
+.content .contact h3 {
+    font-weight: bold;
+    color: #4c4c4c;
+    font-size: 16px;
+    font-family: Arial;
+    margin: 15px 0 0 0;
+    line-height: 20px;
+}
+.content .contact h3.form {
+    margin: 15px 0 11px 0;
+}
+.content .blog, .content .contact {
+    overflow: hidden;
+    padding: 30px 0 10px 0;
+}
+.content .contact .dmt-social-links {
+    height: 32px;
+}
+
+.content .contact .contact-form dd {
+    overflow: hidden;
+}
+.content .contact .contact-form input, .content .contact .contact-form textarea {
+    width: 196px;
+    height: 18px;
+    border: 1px solid #b8d0e3;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    padding: 6px 12px;
+    color: #6d6fa9;
+    font-size: 16px;
+    font-weight: bold;
+}
+.content .contact .contact-form textarea {
+    width: 430px;
+    height: 90px;
+    padding: 10px 0 0 10px;
+}
+.content .contact .contact-form button {
+    border-bottom: 2px solid #414270;
+    border-radius: 5px;
+    background: #6c6ea9;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    padding: 9px 40px;
+    float: right;
+}
+/*.content .contact .contact-form .submit {
+    text-align: right;
+}
+
+    /*MAP*/
+.content .asterisk {
+    float: none;
+    margin: 0 0 0 10px;
+}
+.content #wrap_map {
+    overflow: hidden;
+    margin: 30px 0 0 0;
+}
+.content #wrap_map h3 {
+    font-weight: bold;
+    color: #00aff0;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 0 15px;
+    font-family: Arial,sans-serif;
+}
+.content .gmap {
+    overflow: hidden;
+}
+/*LEADERBOARD*/
+
+/*.content .blog {
+    width: 620px;
+    float: left;
+}*/
+.content .artuniversallightbox_container {
+    width: 300px;
+    clear: none;
+    float: right;
+    text-align: center;
+    padding: 60px 0 0;
+    background: #fcfcfe;
+    /*border-left: 1px solid #dcdced;*/
+}
+.content .artuniversallightbox_container img {
+    margin: 0 11px 30px 0;
+}
+/*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
+/*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
+/*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
+
 
 /*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*/
 /*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*//*SHEDULER SHEDULER SHEDULER*/
