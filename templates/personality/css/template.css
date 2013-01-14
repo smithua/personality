@@ -208,8 +208,14 @@ body {
 .honors_board img {
     margin: 0 40px 20px 0;
 }
-.content .honors_board .items-row {
-    margin: 0 0 0;
+.content .honors_board .leading-0, .content .honors_board .item {
+    overflow: hidden;
+}
+.content .honors_board .category-desc h2 {
+    margin: 0 0 15px 0;
+}
+.content .honors_board h2 {
+    margin: 15px 0 10px 0;
 }
 
 /*PAGINATION*/
