@@ -503,8 +503,6 @@ body {
 .container .item-page {
     overflow: hidden;
     position: relative;
-    width: 600px;
-    height: 574px;
     padding: 30px 340px 0 20px;
     margin: 0 auto;
     border: 1px solid #e4e4e4;
@@ -577,3 +575,9 @@ body {
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
+.content .list_of_titles a img {
+    display: none !important;
+}
+.content .blog .moduletable {
+    display: none;
+}
