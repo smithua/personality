@@ -130,7 +130,7 @@ body {
 
 /*CONTENT*/
 .content {
-    width: 925px;
+    width: 960px;
     margin: 30px auto 20px auto;
     overflow: hidden;
     padding: 0 20px 0 20px;
@@ -167,6 +167,7 @@ body {
     color: #0099d2;
     font-size: 14px;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .content .blog .items-leading {
     overflow: hidden;
     padding: 0 0 13px 0;
@@ -174,9 +175,12 @@ body {
 
     min-height: 175px;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .content .blog .items-row {
     margin: 0 0 102px;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .content .item {
     overflow: hidden;
     border-bottom: 1px solid #9bcee3;
@@ -575,9 +579,244 @@ body {
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
+
+
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
 .content .list_of_titles a img {
     display: none !important;
 }
 .content .blog .moduletable {
     display: none;
 }
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
+/*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
+
+/*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
+/*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
+/*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
+
+.content .blog .items-leading
+{
+    width: 436px;
+    margin: 0 44px 0 20px;
+    float: left;
+    padding: 0;
+}
+
+.content .blog .items-leading p
+{
+    line-height: 1.6em;
+}
+
+
+.content .blog .items-row
+{
+    width:460px;
+    overflow: hidden;
+}
+
+.content .blog .items-row .item
+{
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.content .blog .items-row .item div
+{
+    display: inline-block;
+
+}
+
+.content .blog .items-row .item div.blog_main_text
+{
+    display:block;
+    padding: 24px 0 0 0;
+}
+
+.content .blog .items-row .item span#blog_pad_text
+{
+    padding: 0 20px 0 0;
+    display: block;
+    line-height: 1.5em;
+}
+
+.content .blog .items-row .item span.blue_color
+{
+    color: #0085b8;
+}
+
+.content .blog .items-row .item span#post_color
+{
+    color:#999;
+}
+
+.content .blog p.blog_info_text
+{
+    display: block;
+    padding: 11px 0px 0 0px;
+    border-top: 1px solid #69B9E9;
+    overflow: hidden;
+    margin-top: 7px;
+    font-size:12px;
+}
+
+.content .blog p.partner_info_text
+{
+    display: block;
+    padding: 0px;
+    overflow: hidden;
+    padding:0 30px 0 0;
+    line-height:1.4em;
+    font-size:12px;
+}
+
+.content .blog p{
+    /* display: block;*/
+}
+
+.content .blog .article_title.col_blue
+{
+    color: #0085B8;
+}
+
+.content .blog .article_title
+{
+    font-size: 18px;
+    font-weight:bold;
+    padding: 31px 0 15px 0;
+    color:#ffa541;
+}
+
+.content .blog .article_title.pad_9
+{
+    padding-bottom:9px;
+}
+
+
+.content .blog .partner_img_pos img
+{
+    margin: 5px 45px 20px 0px;
+}
+
+.content .blog .partner_img_pos img.img2
+{
+    margin-right: 0px;
+}
+
+.content .blog .partner_img_pos img.img4
+{
+    margin-right: 0px;
+}
+
+/*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*/
+/*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*/
+/*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*//*END BECOME A PARTNER*/
+
+
+/*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/
+/*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/
+/*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*//*FOOTER*/
+#footer_container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+#footer_button {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    cursor: pointer;
+}
+#footer_content {
+    width: 100%;
+    height: 0px;
+    background: #DCDCDC;
+    overflow: hidden;
+}
+
+#footer_lower_text
+{
+    text-align: right;
+    padding-top: 6px;
+    font-size: 9px;
+    color: #aaaaaa;
+}
+
+.slider {
+    /* Ширина контейнера */
+    width: 900px;
+    position: relative;
+    /* Скроем то что выходит за границы */
+    overflow: hidden;
+}
+/* Двойной клик по кнопкам вперед/назад вызывает выделение всех элементов слайдера,
+поэтому предотвращаем это */
+.slider::-moz-selection { background: transparent; color: #fff; text-shadow: none; }
+.slider::selection { background: transparent; color: #fff; text-shadow: none; }
+
+.slide-list {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.slide-wrap {
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    /* максимально возможная ширина обертки слайдера */
+    width: 10000000px;
+}
+.slide-item {
+    /* Ширина слайда */
+    width: 280px;
+    /* Внутренние отступы */
+    padding: 10px;
+    /* Обтекание */
+    float: left;
+}
+
+.slide-item a {
+    text-decoration: none;
+    text-align: center;
+    color:#000003;
+}
+
+.slide-title {
+    /* Шрифт */
+    font: bold 16px monospace;
+    /* Указываем, что элемент блочный */
+    display: block;
+}
+
+/* навигация вперед/назад */
+.navy {
+    /* абсолютное позиционирование */
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    /* ширина элементов */
+    width: 30px;
+    cursor: pointer;
+}
+.prev-slide {
+    left: 0;
+    background: #fff url(../images/left-arrow.png) 11px 40% no-repeat;
+}
+.next-slide {
+    right: 0;
+    background: #fff url(../images/right-arrow.png) 13px 40% no-repeat;
+}
+.navy.disable {
+    background: #dbdbdb;
+}
+/*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/
+/*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/
+/*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/

@@ -34,6 +34,95 @@ $app = JFactory::getApplication();
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
     <script type="text/javascript">
+        jQuery(document).ready(function(){
+            function htmSlider(){
+                /* Зададим следующие параметры */
+                /* обертка слайдера */
+                var slideWrap = jQuery('.slide-wrap');
+                /* кнопки вперед/назад и старт/пауза */
+                var nextLink = jQuery('.next-slide');
+                var prevLink = jQuery('.prev-slide');
+
+                /* ширина слайда с отступами */
+                var slideWidth = jQuery('.slide-item').outerWidth();
+                /* смещение слайдера */
+                var scrollSlider = slideWrap.position().left - slideWidth;
+
+                /* Клик по ссылке на следующий слайд */
+                nextLink.click(function(){
+                    if( nextLink.attr('name') == 'next' ) {
+                        nextLink.removeAttr('name');
+                        slideWrap.animate({left: scrollSlider}, 500, function(){
+                            slideWrap
+                                    .find('.slide-item:first')
+                                    .appendTo(slideWrap)
+                                    .parent()
+                                    .css({'left': 0});
+                        });
+                        setTimeout(function(){ nextLink.attr('name','next') }, 600);
+                    }
+                });
+
+                /* Клик по ссылке на предыдующий слайд */
+                prevLink.click(function(){
+                    if( prevLink.attr('name') == 'prev' ) {
+
+                        prevLink.removeAttr('name');
+
+                        slideWrap
+                                .css({'left': scrollSlider})
+                                .find('.slide-item:last')
+                                .prependTo(slideWrap)
+                                .parent()
+                                .animate({left: 0}, 500);
+
+                        setTimeout(function(){ prevLink.attr('name','prev') }, 600);
+                    }
+                });
+
+
+                /* Функция автоматической прокрутки слайдера */
+                function autoplay(){
+                    slideWrap.animate({left: scrollSlider}, 500, function(){
+                        slideWrap
+                                .find('.slide-item:first')
+                                .appendTo(slideWrap)
+                                .parent()
+                                .css({'left': 0});
+                    });
+                }
+
+                /* Клики по ссылкам старт/пауза */
+                playLink.click(function(){
+                    Uncaught ReferenceError: playLink is not defined
+                    if(playLink.hasClass('play')){
+                        /* Изменяем клас у кнопки на клас паузы */
+                        playLink.removeClass('play').addClass('pause');
+                        /* Добавляем кнопкам вперед/назад клас который их скрывает */
+                        jQuery('.navy').addClass('disable');
+                        /* Инициализируем функцию autoplay() через переменную
+                           чтобы потом можно было ее отключить
+                        */
+                        timer = setInterval(autoplay, 1000);
+                    } else {
+                        playLink.removeClass('pause').addClass('play');
+                        /* показываем кнопки вперед/назад */
+                        jQuery('.navy').removeClass('disable');
+                        /* Отключаем функцию autoplay() */
+                        clearInterval(timer);
+                    }
+                });
+
+            }
+
+            /* иницилизируем функцию слайдера */
+            htmSlider();
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
         $(document).ready(function(){
 
             $(".trigger").click(function(){
@@ -43,9 +132,6 @@ $app = JFactory::getApplication();
             });
         });
     </script>
-
-
-
     <!-- Reading browser's window width & height and applying them for sheduler -->
     <script type="text/javascript">
         $(document).ready(function(){
@@ -61,6 +147,24 @@ $app = JFactory::getApplication();
         });
     </script>
     <!-- Reading browser's window width & height and applying them for sheduler -->
+    <!-- Footer sllide -->
+    <script type="text/javascript">
+        jQuery(function($) {
+            var open = false;
+            $('#footer_button').click(function () {
+                if(open === false) {
+                    $('#footer_content').animate({ height: '120px' });
+                    $(this).css('backgroundPosition', 'bottom left');
+                    open = true;
+                } else {
+                    $('#footer_content').animate({ height: '0px' });
+                    $(this).css('backgroundPosition', 'top left');
+                    open = false;
+                }
+            });
+        });
+    </script>
+
     </head>
 	<body>
 	<div class="container">
@@ -112,37 +216,56 @@ $app = JFactory::getApplication();
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
-          <!--  <div class="panel">
-                <div class="bg"></div>
-                <div class="pwrap">
-
-                    <h4>Розклад занять</h4>
-                    <ul>
-                        <li>
-                            <jdoc:include type="modules" name="Rozklad_pn" />
-                        </li>
-
-                        <li class="blue">
-                            <jdoc:include type="modules" name="Rozklad_vt" />
-                        </li>
-
-                        <li class="red">
-                            <jdoc:include type="modules" name="Rozklad_sr" />
-                        </li>
-
-                        <li class="blue panel_new_row">
-                            <jdoc:include type="modules" name="Rozklad_4t" />
-                        </li>
-                        <li>
-                            <jdoc:include type="modules" name="Rozklad_pt" />
-                        </li>
-                    </ul>
+        <div id="footer_lower_text">
+            © Центр розвитку дiтей та молодi "Народження особистостi"
+        </div>
 
 
-                </div>
-                <a class="trigger" href="#"></a>
+        <div id="footer_container">
+            <div id="footer_button">BUTTON</div>
+            <div id="footer_content">
+                <a href="&link">Усі новини</a>
+                <div class="slider">
+                    <div class="slide-list">
+                        <div class="slide-wrap">
+                            <div class="slide-item">
+                                <a href="http://localhost/joomla2/index.php?option=com_content&view=article&id=1">
+                                    <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-1.jpg" alt="" />
+                                    <span class="slide-title">Первaya new</span>
+                                </a>
+                            </div>
+                            <div class="slide-item">
+                                <a href="&link">
+                                    <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-1.jpg" alt="" />
+                                    <span class="slide-title">Ну просто очень длинное название второго слайда</span>
+                                </a>
+                            </div>
+                            <div class="slide-item">
+                                <a href="&link">
+                                    <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-3.jpg" alt="" />
+                                    <span class="slide-title">Третий слайд</span>
+                                </a>
+                            </div>
+                            <div class="slide-item">
+                                <a href="&link">
+                                    <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-4.jpg" alt="" />
+                                    <span class="slide-title">Четвертый слайд</span>
+                                </a>
+                            </div>
+                            <div class="slide-item">
+                                <a href="&link">
+                                    <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-5.jpg" alt="" />
+                                    <span class="slide-title">Пятый слайд</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div name="prev" class="navy prev-slide"></div>
+                    <div name="next" class="navy next-slide"></div>
+                    <div class="auto play"></div>
+                </div><!-- SLIDER END-->
             </div>
-            <a class="trigger" href="#"></a>
+        </div>
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
