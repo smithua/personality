@@ -220,6 +220,7 @@ body {
 }
 .content .honors_board h2 {
     margin: 15px 0 10px 0;
+    color: #0c9dcc;
 }
 
 /*PAGINATION*/
@@ -587,8 +588,6 @@ body {
     background: #FCFCFE;
 }
 
-
-
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
 /*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*//*END SINGLE NEW PAGE*/
@@ -610,35 +609,37 @@ body {
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
-/*
-.content .blog .items-leading
+
+.content .partner .items-leading, .content .aboutus .items-leading
 {
     width: 436px;
     margin: 0 44px 0 20px;
     float: left;
     padding: 0;
 }
-
 .content .blog .items-leading p
 {
     line-height: 1.6em;
 }
 
 
-.content .blog .items-row
+.content .partner .items-row
 {
     width:460px;
     overflow: hidden;
 }
 
-.content .blog .items-row .item
+.content .partner .items-row .item, .content .aboutus .items-row .item
 {
     border:none;
     margin:0;
     padding:0;
 }
+.content .aboutus .items-leading {
+    border: 0;
+}
 
-.content .blog .items-row .item div
+.content .partner .items-row .item div, .content .aboutus .items-row .item div
 {
     display: inline-block;
 
