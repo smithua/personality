@@ -181,7 +181,6 @@ $app = JFactory::getApplication();
             <jdoc:include type="modules" name="before-content" />
             <jdoc:include type="component" />
             <jdoc:include type="modules" name="personality-map" />
-            <jdoc:include type="modules" name="personality-lightbox" />
         </div>
         <div class="panel">
             <div class="bg"></div>

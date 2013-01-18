@@ -315,6 +315,19 @@ body {
     font-weight: bold;
     font-family: 'PT Sans', sans-serif;
 }
+
+::-webkit-input-placeholder {
+    color: #6d6fa9;
+}
+:-moz-placeholder {
+    color: #6d6fa9;
+}
+::-moz-placeholder {
+    color: #6d6fa9;
+}
+:-ms-input-placeholder {
+    color:    #6d6fa9;
+}
 .content .contact .contact-form textarea {
     width: 430px;
     height: 90px;
@@ -587,8 +600,8 @@ body {
 .content .list_of_titles a img {
     display: none !important;
 }
-.content .blog .moduletable {
-    display: none;
+.content .blog .moduletable .list_of_titles {
+    display: none !important;
 }
 /*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
 /*list of articles crack*//*list of articles crack*//*list of articles crack*//*list of articles crack*/
@@ -597,7 +610,7 @@ body {
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
 /*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*//*BECOME A PARTNER*/
-
+/*
 .content .blog .items-leading
 {
     width: 436px;
