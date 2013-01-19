@@ -177,6 +177,22 @@ $app = JFactory::getApplication();
             </div>
             <jdoc:include type="modules" name="personality-topmenu" />
         </div>
+
+
+        <?php $currentMenuId = JSite::getMenu()->getActive()->id; ?>
+        <?php if($currentMenuId == 108):?>
+            <style type="text/css">
+                .content {
+                    background: #fcfcfe;
+                    padding: 0 20px 0 0;
+                }
+                .honors_board {
+                    background: #fff;
+                    padding: 30px 40px 10px 20px !important;
+                }
+            </style>
+        <?php endif;?>
+
         <div class="content">
             <jdoc:include type="modules" name="before-content" />
             <jdoc:include type="component" />

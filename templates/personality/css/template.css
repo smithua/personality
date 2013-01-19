@@ -177,8 +177,8 @@ body {
 }
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-.content .blog .items-row {
-    margin: 0 0 102px;
+.content .allnews .items-row {
+    margin: 0 0 102px 0;
 }
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .content .item {
@@ -208,6 +208,8 @@ body {
 .honors_board {
     padding: 30px 40px 10px 0 !important;
     border-right: 1px solid #dcdced;
+    width: 600px;
+    overflow: visible !important;
 }
 .honors_board img {
     margin: 0 40px 20px 0;
@@ -219,9 +221,29 @@ body {
     margin: 0 0 15px 0;
 }
 .content .honors_board h2 {
-    margin: 15px 0 10px 0;
+    margin: 15px 0 5px 0;
     color: #0c9dcc;
 }
+.content .honors_board .items-leading, .honors_board .items-row {
+    position: relative;
+    overflow: visible;
+}
+
+/*lightbox*/
+.honors_board .moduletable {
+    overflow: hidden;
+    float: right;
+    position: absolute;
+    right: -250px;
+    top: 15px;
+}
+.honors_board .moduletable h3 {
+    display: none;
+}
+.honors_board .moduletable img {
+    margin: 0;
+}
+
 
 /*PAGINATION*/
 
@@ -372,22 +394,17 @@ body {
 }
 /*LEADERBOARD*/
 
-/*.content .blog {
-    width: 620px;
-    float: left;
-}*/
-.content .artuniversallightbox_container {
+/*.content .artuniversallightbox_container {
     width: 300px;
     clear: none;
     float: right;
     text-align: center;
     padding: 60px 0 0;
     background: #fcfcfe;
-    /*border-left: 1px solid #dcdced;*/
 }
 .content .artuniversallightbox_container img {
     margin: 0 11px 30px 0;
-}
+}*/
 /*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
 /*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
 /*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*//*END VITYA*/
