@@ -342,8 +342,9 @@ function LOAmakeLink ($link, $title, $sep=false, $showactivelink,$id, $current_i
 	if($showactivelink=='showinactive' and $id==$current_id)
 		$linkitem =$title;
 	else
-		$linkitem = '<a href="'.$link.'"'.($metadesc_!='' ? 'title="'.$metadesc_.'"' : '').'>'.$title.'</a>';
-	
+//		$linkitem = '<a href="'.$link.'"'.($metadesc_!='' ? 'title="'.$metadesc_.'"' : '').'>'.$title.'</a>';
+        $linkitem = '<a href="index.php/news/'.$id.'">'.$title.'</a>';
+
 	return ( $sep ? '<li class="separator">'.$title.'</li>':'<li>'.$linkitem .'</li>' );
 }
 function LOAmakeLink_forTable ($link, $title, $sep=false, $showactivelink, $id, $current_id, $metadesc)
