@@ -67,11 +67,11 @@ abbr,acronym {
 
 body {
     margin: 0;
-    background: #000;
 }
 
 .container {
     min-width: 960px;
+    background: url(/images/backgroung.png);
 }
 
 
@@ -135,7 +135,10 @@ body {
     overflow: hidden;
     padding: 0 20px 0 20px;
     background: #fff;
-    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 5px 0.5px #bebebe;
+    box-shadow: 0px 0px 5px 0.5px #bebebe;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }.content {
      overflow: hidden;
  }
