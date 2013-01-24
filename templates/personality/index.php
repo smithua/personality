@@ -135,13 +135,13 @@ $app = JFactory::getApplication();
     <!-- Reading browser's window width & height and applying them for sheduler -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".panel").css({'width':$(window).width(), 'height':$(window).height()});
+            $(".panel").css({'width':$(window).width(), 'height':768});
             $(".pwrap").css('right',function(){return (($(window).width()-920)/2)});
-            if ($(window).height()>'700'){$(".pwrap").css('top',function(){return (($(window).height()-700)/2)})};
+            if ($(window).height()>'768'){$(".pwrap").css('top',function(){return (($(window).height()-768)/2)})};
             window.onresize = function() {
-                $(".panel").css({'width':$(window).width(), 'height':$(window).height()});
+                $(".panel").css({'width':$(window).width()});
                 $(".pwrap").css('right',function(){return (($(window).width()-920)/2)});
-                if ($(window).height()>'700'){$(".pwrap").css('top',function(){return (($(window).height()-700)/2)})};
+                if ($(window).height()>'768'){$(".pwrap").css('top',function(){return (($(window).height()-768)/2)})};
             };
             return false;
         });
