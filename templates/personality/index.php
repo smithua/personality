@@ -197,7 +197,7 @@ $app = JFactory::getApplication();
             <jdoc:include type="modules" name="before-content" />
             <jdoc:include type="component" />
             <?php if($currentMenuId == 109):?>
-            <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/placeholder.js"></script>
+                <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/placeholder.js"></script>
             <?php endif;?>
             <jdoc:include type="modules" name="personality-map" />
         </div>
