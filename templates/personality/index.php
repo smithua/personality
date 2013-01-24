@@ -170,7 +170,7 @@ $app = JFactory::getApplication();
 	<div class="container">
         <div class="header">
             <div class="wrap_logo">
-                <a href="index.php/news">
+                <a href="#">
                     <h1>Personality</h1>
                     <span>LOGO</span>
                 </a>
@@ -242,7 +242,7 @@ $app = JFactory::getApplication();
         <div id="footer_container">
             <div id="footer_button">BUTTON</div>
             <div id="footer_content">
-                <a href="&link">Усі новини</a>
+                <a href="index.php/news">Усі новини</a>
                 <div class="slider">
                     <div class="slide-list">
                         <div class="slide-wrap">
