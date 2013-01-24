@@ -586,7 +586,7 @@ body {
 .item-page .img-fulltext-left {
     float:left;
     margin-right: 22px;
-    /*margin-bottom: 8px;*/
+    margin-bottom: 8px;
 }
 
 .item-page>p {
