@@ -33,6 +33,7 @@ $app = JFactory::getApplication();
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
+
     <script type="text/javascript">
         jQuery(document).ready(function(){
             function htmSlider(){
@@ -42,7 +43,9 @@ $app = JFactory::getApplication();
                 /* кнопки вперед/назад и старт/пауза */
                 var nextLink = jQuery('.next-slide');
                 var prevLink = jQuery('.prev-slide');
-
+                var playLink = jQuery('.auto');
+                /* Проверка на анимацию */
+                var is_animate = false;
                 /* ширина слайда с отступами */
                 var slideWidth = jQuery('.slide-item').outerWidth();
                 /* смещение слайдера */
@@ -50,8 +53,7 @@ $app = JFactory::getApplication();
 
                 /* Клик по ссылке на следующий слайд */
                 nextLink.click(function(){
-                    if( nextLink.attr('name') == 'next' ) {
-                        nextLink.removeAttr('name');
+                    if(!slideWrap.is(':animated')) {
                         slideWrap.animate({left: scrollSlider}, 500, function(){
                             slideWrap
                                     .find('.slide-item:first')
@@ -59,42 +61,38 @@ $app = JFactory::getApplication();
                                     .parent()
                                     .css({'left': 0});
                         });
-                        setTimeout(function(){ nextLink.attr('name','next') }, 600);
                     }
                 });
 
                 /* Клик по ссылке на предыдующий слайд */
                 prevLink.click(function(){
-                    if( prevLink.attr('name') == 'prev' ) {
-
-                        prevLink.removeAttr('name');
-
+                    if(!slideWrap.is(':animated')) {
                         slideWrap
                                 .css({'left': scrollSlider})
                                 .find('.slide-item:last')
                                 .prependTo(slideWrap)
                                 .parent()
                                 .animate({left: 0}, 500);
-
-                        setTimeout(function(){ prevLink.attr('name','prev') }, 600);
                     }
                 });
 
-
                 /* Функция автоматической прокрутки слайдера */
                 function autoplay(){
-                    slideWrap.animate({left: scrollSlider}, 500, function(){
-                        slideWrap
-                                .find('.slide-item:first')
-                                .appendTo(slideWrap)
-                                .parent()
-                                .css({'left': 0});
-                    });
+                    if(!is_animate){
+                        is_animate = true;
+                        slideWrap.animate({left: scrollSlider}, 500, function(){
+                            slideWrap
+                                    .find('.slide-item:first')
+                                    .appendTo(slideWrap)
+                                    .parent()
+                                    .css({'left': 0});
+                            is_animate = false;
+                        });
+                    }
                 }
 
                 /* Клики по ссылкам старт/пауза */
                 playLink.click(function(){
-                    Uncaught ReferenceError: playLink is not defined
                     if(playLink.hasClass('play')){
                         /* Изменяем клас у кнопки на клас паузы */
                         playLink.removeClass('play').addClass('pause');
@@ -234,18 +232,17 @@ $app = JFactory::getApplication();
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
             <!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER--><!--SHEDULER SHEDULER SHEDULER-->
-        <div id="footer_lower_text">
-            © Центр розвитку дiтей та молодi "Народження особистостi"
-        </div>
 
 
         <div id="footer_container">
-            <div id="footer_button">BUTTON</div>
-            <div id="footer_content">
-                <a href="index.php/news">Усі новини</a>
+            <div class="footer">
+                <!-- SLIDER-->
+
+                <a href="&link">Усі новини</a>
                 <div class="slider">
                     <div class="slide-list">
                         <div class="slide-wrap">
+
                             <div class="slide-item">
                                 <a href="http://localhost/joomla2/index.php?option=com_content&view=article&id=1">
                                     <img src="<?php echo $this->baseurl;?>/templates/<?php echo $this->template;?>/images/img-1.jpg" alt="" />
@@ -277,13 +274,15 @@ $app = JFactory::getApplication();
                                 </a>
                             </div>
                         </div>
+                        <div class="clear"></div>
                     </div>
                     <div name="prev" class="navy prev-slide"></div>
                     <div name="next" class="navy next-slide"></div>
                     <div class="auto play"></div>
                 </div><!-- SLIDER END-->
-            </div>
-        </div>
+            </div><!-- footer end-->
+
+
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
             <!--END SHEDULER END SHEDULER END SHEDULER--><!--END SHEDULER END SHEDULER END SHEDULER-->
