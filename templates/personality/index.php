@@ -194,6 +194,8 @@ $app = JFactory::getApplication();
         <div class="content">
             <jdoc:include type="modules" name="before-content" />
             <jdoc:include type="component" />
+            <jdoc:include type="modules" name="lightbox" />
+            <jdoc:include type="modules" name="lightbox1" />
             <?php if($currentMenuId == 109):?>
                 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/placeholder.js"></script>
             <?php endif;?>
@@ -238,7 +240,7 @@ $app = JFactory::getApplication();
             <div class="footer">
                 <!-- SLIDER-->
 
-                <a href="&link">Усі новини</a>
+                <a href="index.php/news">Усі новини</a>
                 <div class="slider">
                     <div class="slide-list">
                         <div class="slide-wrap">
