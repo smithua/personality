@@ -893,3 +893,94 @@ body {
 /*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/
 /*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/
 /*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*//*END FOOTER*/
+
+
+/*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*/
+/*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*/
+/*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*//*Activity Page*/
+
+body .blogactivity {
+    height: 600px;
+    position: relative;
+    top:0;
+    left:0;
+    background: url(../images/bg_activity.png) 50% 100% no-repeat;
+}
+
+.blogactivity .items-leading>div {
+    float:left;
+}
+
+.blogactivity .items-leading p {
+    display: none;
+}
+
+.blogactivity .leading-8 {
+    position: absolute;
+    bottom: 132px;
+    left: 2px;
+}
+
+.blogactivity .items-leading img:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=65);
+    -moz-opacity: 0.65;
+    -khtml-opacity: 0.65;
+    opacity: 0.65;
+}
+
+.blogactivity .leading-7 {
+    position: absolute;
+    bottom: 242px;
+    left: 133px;
+}
+
+.blogactivity .leading-6 {
+    position: absolute;
+    bottom: 104px;
+    left: 237px;
+}
+
+.blogactivity .leading-5 {
+    position: absolute;
+    bottom: 300px;
+    left: 337px;
+}
+
+.blogactivity .leading-4 {
+    position: absolute;
+    bottom: 166px;
+    left: 430px;
+}
+
+.blogactivity .leading-3 {
+    position: absolute;
+    bottom: 256px;
+    left: 527px;
+}
+
+.blogactivity .leading-0 {
+    position: absolute;
+    bottom: 100px;
+    left: 634px;
+}
+
+.blogactivity .leading-2 {
+    position: absolute;
+    bottom: 213px;
+    left: 744px;
+}
+
+.blogactivity .leading-1 {
+    position: absolute;
+    bottom: 92px;
+    left: 832px;
+}
+
+.blogactivity h2 span {
+    font: 20px Myriad Pro;
+    text-transform: uppercase;
+}
+/*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*/
+/*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*/
+/*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*//*Activity Page END*/
